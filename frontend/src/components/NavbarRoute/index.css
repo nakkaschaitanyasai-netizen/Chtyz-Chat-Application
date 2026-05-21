@@ -1,0 +1,29 @@
+.navbar{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right:10px;
+}
+.ul-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 400px;
+    max-width: 300px;
+}
+.nav-items{
+    cursor: pointer;
+}
+.icons-size{
+    height: 120px;
+    width: 130px;
+    color: #000000;
+}
+.logo{
+    height: 45px;
+    width: 55px;
+    border-radius:50px;
+}

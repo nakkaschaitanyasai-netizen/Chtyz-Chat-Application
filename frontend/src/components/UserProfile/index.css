@@ -1,0 +1,40 @@
+.user-card{
+    width:auto;
+    margin: 20px;
+    display:flex;
+    flex-direction:row;
+    cursor:pointer;
+    flex-wrap:wrap;
+    margin-right: 10px;
+
+}
+.profile-pic{
+    height: 50px;
+    width: 50px;
+    border-radius:50px;
+    flex-wrap: wrap;
+}
+.name{
+    font-size:15px;
+    font-weight:bolder;
+    color: #000000;
+}
+.names-con{
+    padding-top:6px;
+    display:flex;
+    flex-direction:column;
+    margin-left:10px;
+
+
+}
+.indicator{
+    color:silver;
+    font-family:"Italic";
+    font-size:12px;
+}
+.line{
+    border-width:1px;
+    border-color:silver;
+    width:80%;
+    margin-left: 25px;
+}
