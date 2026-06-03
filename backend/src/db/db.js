@@ -20,9 +20,6 @@ export const connectDB = async () => {
             profilepic TEXT
           )
         `);
-        const users = await db.all("drop table if exists demoUsers");
-        console.log("Connected to SQLite database");
-        console.log("Users:", users);
 
         await db.exec(`
             CREATE TABLE IF NOT EXISTS messages (
@@ -32,9 +29,6 @@ export const connectDB = async () => {
             message TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );`);
-        const msgs=await db.run("drop table if exists messages");
-        console.log("Connected to SQLite database");
-        console.log("Messages:", msgs);
 
         return db;
     } catch (error) {
