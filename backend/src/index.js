@@ -5,11 +5,20 @@ import messageRoutes from "./routes/auth.route.js";
 import { connectDB } from "./db/db.js";
 import cookieParser from "cookie-parser";
 import "dotenv/config";
-
+import cors from "cors";
 import { initializeSocket } from "./socket/socket.js";
 
 const app = express();
-
+app.use(
+  cors({
+    origin: [
+      "https://chtyz-chat-application.vercel.app",
+      "http://localhost:5173",
+    ],
+    methods: ["GET", "POST"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 app.use(cookieParser());
 
