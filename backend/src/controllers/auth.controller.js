@@ -1,7 +1,6 @@
 import bcrypt from "bcryptjs";
 import {getDB} from "../db/db.js";
 import jwt from "jsonwebtoken";
-import cloudinary from "../db/cloudnary.js";
 
 export const signup = async (req, res) => {
   try {

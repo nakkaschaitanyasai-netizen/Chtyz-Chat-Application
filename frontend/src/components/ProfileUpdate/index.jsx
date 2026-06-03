@@ -57,9 +57,13 @@ class ProfileUpdate extends Component {
       },
       body: JSON.stringify({ profilepic: imgUrl }),
     };
-    const data = await fetch(Url, options);
-    const response = await data.json();
-    console.log(response);
+    const response = await fetch(Url, options);
+    const data = await response.json(); 
+      if (response.ok) {
+        {/*nothing */}
+      } else {
+        console.error("Profile update failed:", data.error.message);
+      }
   };
   render() {
     const { img, imgUrl, username, email } = this.state;

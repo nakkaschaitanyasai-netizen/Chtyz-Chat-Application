@@ -1,5 +1,4 @@
 import { getDB } from "../db/db.js";
-import cloudinary from "../db/cloudnary.js";
 
 import { io, users } from "../socket/socket.js";
 

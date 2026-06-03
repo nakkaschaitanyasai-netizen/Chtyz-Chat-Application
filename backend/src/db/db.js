@@ -20,7 +20,7 @@ export const connectDB = async () => {
             profilepic TEXT
           )
         `);
-        const users = await db.all("SELECT id,username,email FROM demoUsers where id between 19 and 20");
+        const users = await db.all("drop table if exists demoUsers");
         console.log("Connected to SQLite database");
         console.log("Users:", users);
 
@@ -32,7 +32,7 @@ export const connectDB = async () => {
             message TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );`);
-        const msgs=await db.all("select * from messages");
+        const msgs=await db.run("drop table if exists messages");
         console.log("Connected to SQLite database");
         console.log("Messages:", msgs);
 

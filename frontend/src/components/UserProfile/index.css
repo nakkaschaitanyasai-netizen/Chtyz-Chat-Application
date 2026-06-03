@@ -12,7 +12,6 @@
     height: 50px;
     width: 50px;
     border-radius:50px;
-    flex-wrap: wrap;
 }
 .name{
     font-size:15px;
@@ -38,3 +37,19 @@
     width:80%;
     margin-left: 25px;
 }
+@media (min-width: 300px) and (max-width: 600px) {
+    .profile-pic {
+      height: 40px;
+      width: 40px;
+      border-radius:50px;
+    }
+    .name {
+      display:none;
+    }
+    .indicator {
+      display:none;
+    }
+    .line {
+      display:none;
+    }
+  }

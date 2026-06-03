@@ -24,9 +24,7 @@ class Signup extends Component {
 
     const response = await fetch(url,options);
     const data = await response.json();
-    console.log("Signup response:", data);
     if (response.ok) {
-      console.log("Signup successful:", data);
       this.setState({ success: "Signup successful Click Login and continue", error: "",email:"",password:"",username:""  });
     } else {
       const errorMessage = data.message || "Signup failed. Please try again.";

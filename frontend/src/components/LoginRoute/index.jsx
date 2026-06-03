@@ -39,7 +39,6 @@ class LoginRoute extends Component {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      console.log(data, "login response");
       if (response.ok) {
         this.successfulLogin(data.token);
       } else if (data.message === "User not found") {

@@ -21,7 +21,6 @@ class HomeRoute extends Component{
         }
         const response= await fetch(Url,options);
         const data= await response.json();
-        console.log(data,"home response")
         this.setState({users:data.users, loginUser:data.loginUser});
     }
     onUpdateChatUser=(id)=>{
