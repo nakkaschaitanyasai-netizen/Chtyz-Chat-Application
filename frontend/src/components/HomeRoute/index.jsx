@@ -11,7 +11,7 @@ class HomeRoute extends Component{
     }
     componentDidMount=async()=>{
         const token=Cookies.get("token");
-        const Url = "/api/auth/";
+        const Url = `${import.meta.env.VITE_API_URL}/api/auth/`;
         const options={
             method:"GET",
             headers:{

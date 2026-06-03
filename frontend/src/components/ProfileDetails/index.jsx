@@ -11,7 +11,7 @@ class ProfileDetails extends Component {
   };
   componentDidMount = async () => {
     const token = Cookies.get("token");
-    const data = await fetch("/api/auth/profile-details", {
+    const data = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/profile-details`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

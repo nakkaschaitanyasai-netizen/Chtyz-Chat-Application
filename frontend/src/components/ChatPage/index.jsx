@@ -140,7 +140,7 @@ class ChatPage extends Component {
       body: JSON.stringify(receiver_details),
     };
 
-    const response = await fetch("/api/auth/messages", options);
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/messages`, options);
 
     const data = await response.json();
 

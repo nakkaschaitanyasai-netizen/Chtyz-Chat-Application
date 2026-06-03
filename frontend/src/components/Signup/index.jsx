@@ -12,7 +12,7 @@ class Signup extends Component {
   };
   onSuccessfullSignup = async () => {
     const { username, email, password } = this.state;
-    const url = "/api/auth/signup";
+    const url = `${import.meta.env.VITE_API_URL}/api/auth/signup`;
     const userDetails = { username, email, password };
     const options={
       method:"POST",

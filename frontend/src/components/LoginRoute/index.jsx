@@ -27,7 +27,7 @@ class LoginRoute extends Component {
       return;
     }
 
-    const url = "/api/auth/login";
+    const url = `${import.meta.env.VITE_API_URL}/api/auth/login`;
     const userDetails = { email, password };
     const options = {
         method: "POST",

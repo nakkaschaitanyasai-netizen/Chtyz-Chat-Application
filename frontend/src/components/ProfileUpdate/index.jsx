@@ -35,7 +35,7 @@ class ProfileUpdate extends Component {
         Authorization: `Bearer ${token}`,
       },
     };
-    const data = await fetch("/api/auth/profile-details", options);
+    const data = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/profile-details`, options);
     const response = await data.json();
     const admin = response.user;
     this.setState({
@@ -48,7 +48,7 @@ class ProfileUpdate extends Component {
     const { imgUrl } = this.state;
     console.log(imgUrl);
     const token = Cookies.get("token");
-    const Url = "/api/auth/profile-update";
+    const Url = `${import.meta.env.VITE_API_URL}/api/auth/profile-update`;
     const options = {
       method: "PUT",
       headers: {
