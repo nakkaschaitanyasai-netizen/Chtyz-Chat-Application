@@ -10,6 +10,7 @@ export const initializeSocket = (server) => {
       origin: ["https://chtyz-chat-application.vercel.app","http://localhost:5173"],
       methods: ["GET", "POST"],
     },
+    credentials: true,
   });
 
   io.on("connection", (socket) => {
