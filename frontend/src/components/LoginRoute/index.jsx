@@ -39,9 +39,10 @@ class LoginRoute extends Component {
 
       const response = await fetch(url, options);
       const data = await response.json();
-      if (response.ok) {
+      if (data.ok) {
         this.successfulLogin(data.token);
-      } else if (data.message === "User not found") {
+      } else if (response.status === 404) {
+        alert(data.message)
         history.replace("/signup");
       } else {
         this.setState({ error: data.message || "Invalid credentials" });

@@ -38,7 +38,10 @@ export const login = async (req, res) => {
       [email]
     );
     if (!user) {
-      return res.status(401).json({ message: "User not found" });
+      return res.status(404).json({
+        ok:false,
+        message:"User not found. Please create an account."
+      })
     }
     const isMatch = bcrypt.compareSync(password, user.password);
     
