@@ -15,7 +15,6 @@ app.use(
       "https://chtyz-chat-application.vercel.app",
       "http://localhost:5173",
     ],
-    methods: ["GET", "POST"],
     credentials: true,
   }),
 );
