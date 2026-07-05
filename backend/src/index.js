@@ -13,6 +13,7 @@ app.use(
   cors({
     origin: [
       "https://chtyz-chat-application.vercel.app",
+      "https://chtyz-chat-application-1cuamrmnd-chaitanya-nakka-projects.vercel.app",
       "http://localhost:5173",
     ],
     credentials: true,

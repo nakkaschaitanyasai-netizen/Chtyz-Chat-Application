@@ -7,12 +7,14 @@ let io;
 export const initializeSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: ["https://chtyz-chat-application.vercel.app","http://localhost:5173"],
-      methods: ["GET", "POST"],
+      origin: [
+        "https://chtyz-chat-application.vercel.app",
+        "https://chtyz-chat-application-1cuamrmnd-chaitanya-nakka-projects.vercel.app",
+        "http://localhost:5173",
+      ],
+      credentials: true,
     },
-    credentials: true,
   });
-
   io.on("connection", (socket) => {
     console.log("User Connected:", socket.id);
 
